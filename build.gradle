@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.github.desperateyuri.server'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+    implementation 'mysql:mysql-connector-java:8.0.29'
+
+//    implementation 'ch.qos.logback:logback-classic:1.3.0-alpha15'
+//    implementation 'org.slf4j:slf4j-simple:2.0.0-alpha7'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+application {
+    mainClass = 'com.github.desperateyuri.server.Main'
+}
+
+test {
+    useJUnitPlatform()
+}
